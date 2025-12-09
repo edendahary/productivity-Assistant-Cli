@@ -1,0 +1,142 @@
+# 🧠 Productivity Assistant (CLI)
+
+A command-line productivity assistant built with **Node.js + TypeScript**, designed to demonstrate:
+
+- Integration with a real LLM (**Gemini 2.5 Flash**)
+- Usage of external REST APIs (OpenWeatherMap, ZenQuotes)
+- Task management with local persistence
+- Multi-step reasoning (daily summaries, recommendations)
+- Hallucination-safe design and controlled LLM behavior
+- A clean, structured conversation flow
+
+---
+
+## 🚀 Features
+
+### ✅ Task Management (Persistent)
+- `add task: <text>` — Add a new task  
+- `list tasks` — Display all tasks  
+- `done: <n>` — Mark task as completed  
+- `edit: <n>: <text>` — Edit task content  
+- `delete: <n>` — Delete a task  
+- `stats` — Show task completion percentage  
+
+All tasks are saved in **tasks.json** for persistence.
+
+---
+
+### ✅ LLM-Powered Reasoning (Gemini 2.5 Flash)
+
+- `day summary: <your day>`  
+  Provides a structured reflection:
+  - Daily summary  
+  - Strengths  
+  - Areas to improve  
+  - Actionable tips  
+
+- Supports multi-turn conversation using stored history  
+- Short, practical productivity-focused responses  
+
+---
+
+### ✅ Daily Recommendations (LLM + APIs)
+
+Command:  daily: <city>
+
+
+This feature combines:
+
+- 🌤 **Live weather data** (OpenWeatherMap)  
+- 💬 **Daily quote** (ZenQuotes)  
+- 🧠 **Gemini reasoning** to generate personalized productivity recommendations  
+
+If data is missing, the assistant explicitly reports it (no hallucination).
+
+---
+
+## 🔒 Hallucination Management
+
+The assistant includes a robust anti-hallucination design:
+
+### 1. Prompt-Level Rules
+- Never invent weather or quote data  
+- If data is missing → say so explicitly  
+
+### 2. API-Level Safety
+If an API fails:
+- `getWeather()` → returns `null`  
+- `getDailyQuote()` → returns `null`  
+- The assistant never fabricates fallback values  
+
+### 3. LLM Logic for Missing Data
+Missing values are passed as:
+- Weather → `"unknown"`  
+- Quote → `"No quote available"`
+
+The assistant then outputs:
+- “I don’t have weather data right now.”  
+- “No quote available right now.”  
+
+---
+
+## 🏗 Architecture
+
+src/
+├─ index.ts # CLI entry point
+├─ conversationManager.ts # Routing, command handling, history
+├─ geminiClient.ts # LLM interface (Gemini 2.5 Flash)
+├─ apis.ts # Weather + quote APIs
+├─ taskManager.ts # CRUD operations for tasks
+├─ storage.ts # JSON persistence
+├─ types.ts # Interfaces
+tasks.json # Local storage for tasks
+
+
+---
+
+## 🧰 Tech Stack
+
+- Node.js + TypeScript  
+- Google Gemini 2.5 Flash API  
+- OpenWeatherMap API  
+- ZenQuotes API  
+- Readline CLI  
+- Local file persistence  
+
+---
+
+## ▶️ How to Run
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a .env file:
+```bash
+GEMINI_API_KEY=your_key
+OPENWEATHER_API_KEY=your_openweather_key
+```
+
+Run the assistant:
+```bash
+npm start
+```
+
+💬 Example Conversation
+
+For a full transcript demonstrating:
+
+Task creation & editing
+
+Statistics
+
+Daily recommendations
+
+Real API usage
+
+Day summary reasoning
+
+Hallucination-safe behavior
+
+➡️ See TRANSCRIPT.md
