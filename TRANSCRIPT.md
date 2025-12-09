@@ -1,4 +1,4 @@
-# 📜 Conversation Transcript — Productivity Assistant (CLI)
+# 📜 Conversation Transcript - Productivity Assistant (CLI)
 
 ```text
 ( app starts )
@@ -87,7 +87,7 @@ You spent part of the day distracted (phone, social media), but you still invest
 - Phone use interrupted deep focus.
 
 ✅ Tips for tomorrow  
-- Start with a 45–60 minute deep-focus block on your most important task.  
+- Start with a 45-60 minute deep-focus block on your most important task.  
 - Keep your phone in another room during work blocks.  
 - Plan 3 realistic tasks instead of a long to-do list.  
 - Schedule short, intentional breaks to avoid impulsive scrolling.
@@ -96,15 +96,15 @@ You: daily: tel aviv
 Assistant: Good morning from Tel Aviv!
 
 Weather: Light rain, 20°C.  
-Quote: "The unthankful heart discovers no mercies; but the thankful heart will find, in every hour, some heavenly blessings." — Henry Ward Beecher  
+Quote: "The unthankful heart discovers no mercies; but the thankful heart will find, in every hour, some heavenly blessings." - Henry Ward Beecher  
 
 🌤 Daily Productivity Recommendation:
 
 - Embrace the indoors: With light rain outside, it's a great opportunity for focused indoor work.  
 - Start with gratitude: Take 3 minutes to write down things you're grateful for.  
-- Deep work block: Choose one important task and give it a 60–90 minute focus session.  
+- Deep work block: Choose one important task and give it a 60-90 minute focus session.  
 - Mindful breaks: Take short breaks every hour to reset and avoid phone distractions.  
-- Evening reflection: Write down 1–2 “small blessings” from the day.
+- Evening reflection: Write down 1-2 “small blessings” from the day.
 
 You: list tasks
 Assistant: Here are your tasks:
