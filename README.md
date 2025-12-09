@@ -82,14 +82,23 @@ The assistant then outputs:
 ## 🏗 Architecture
 
 src/
+
 ├─ index.ts # CLI entry point
+
 ├─ conversationManager.ts # Routing, command handling, history
+
 ├─ geminiClient.ts # LLM interface (Gemini 2.5 Flash)
+
 ├─ apis.ts # Weather + quote APIs
+
 ├─ taskManager.ts # CRUD operations for tasks
+
 ├─ storage.ts # JSON persistence
+
 ├─ types.ts # Interfaces
+
 tasks.json # Local storage for tasks
+
 
 
 ---
